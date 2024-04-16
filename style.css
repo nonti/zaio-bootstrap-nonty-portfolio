@@ -49,6 +49,9 @@ body {
     top: 0;
 }
 
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
@@ -70,13 +73,13 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
-
+/* typewriter with palin html css
 .typewriter {
   position: relative;
 }
 
 .typewriter {
-content: '|';
+  content: '|';
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
@@ -102,5 +105,11 @@ content: '|';
 
 50% {
   border-right: 2px solid #fff;
-}
+  }
+} */
+
+.scrolling {
+  background-color: black;
+  opacity: 90%;
+  transition: all 0.5s;
 }

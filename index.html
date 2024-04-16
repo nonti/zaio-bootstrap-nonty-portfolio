@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Portfolio Nontombi Mbowane</title>
+    <title>Portfolio | Nontombi Mbowane</title>
 
         <!-- Bootstrap core CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -17,25 +17,26 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body class="bg-light">
-  <div class="banner-wrap vh-100 vw-100 text-white">
-    <div class="overlay"></div>
-      <header class="px-5 p-3 text-white"></header>
+ 
+      <header class="px-5 p-3 text-white fixed-top scrolling">
         <div>
           <h3 class="float-md-start text-center">Portfolio</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#about-us">About me</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#contact">Contact</a>
           </nav>
         </div>
       </header>
-    
-  <main class="px-3 d-flex flex-column justify-content-center align-items-center h-100 text-center">
-    <h1 class="display-1">I am Nontombi Mbowane</h1>
-    <p class="leap typewriter">Fullstack web developer. Java Programmer.</p>
-  </main>
-</div>
-    <section>
+    <div class="banner-wrap vh-100 vw-100 d-flex text-white justify-content-center align-items-center">
+      <div class="overlay"></div>
+      <main class="text-center">
+        <h1 class="display-1">I am Nontombi Mbowane</h1>
+        <span id="typed" class="lead"></span>
+        </main>
+    </div>
+    <section id="about-us">
       <div class="container p-5">
             <div class="card">
               <div class="card-body ">
@@ -76,8 +77,8 @@
       </div>
     </section>
 
-    <section>
-      <div class="container p-5">
+    <section id="projects">
+      <div class="container p-5 p-3">
         <h1 class="text-center"><mark>Projects</mark></h1>
         <div class="row">
           <div class="col-md-4 mt-3">
@@ -90,8 +91,8 @@
               <div class="card-body">
                 <h5 class="card-title">Tesla Landing Page</h5>
                 <p class="card-text">Built this with HTML & CSS</p>
-                <a href="https://tesla-zaio-platform-landing-page.netlify.app" target="_blank" class="btn btn-primary">View Website</a>
-                <a href="#" target="_blank" class="btn btn-outline-dark"><i class="bi bi-code-slash"></i></a>
+                <a href="https://zaio-nonty-tesla-landing-page.netlify.app" target="_blank" class="btn btn-primary">View Website</a>
+                <a href="https://github.com/nonti/zaio-tesla" target="_blank" class="btn btn-outline-dark"><i class="bi bi-code-slash"></i></a>
               </div>
             </div>
           </div>
@@ -145,7 +146,7 @@
 
       </div>
     </section>
-    <section>
+    <section id="contact">
       <div class="container p-5">
         <div class="card p-3">
           <div class="card-body px-5 text-center">
@@ -179,5 +180,27 @@
         </div>
       </div>
     </section>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header")
+        header.classList.toggle("scrolling", window.scrollY > 0)
+      }) 
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+        strings: ['Fullstack web developer.', 'Java Programmer.'],
+        loop: true,
+        typeSpeed: 25, 
+        shuffle:true
+        });
+    </script>
+
+    <footer class="bg-dark text-center text-white">
+      <div class="container p-3">
+        <p>Developed ny Nontombi Mbowane using bootstrap, for Zaio Bootstrap course</p>
+      </div>
+    </footer>
   </body>
 </html>
