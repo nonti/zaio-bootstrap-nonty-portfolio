@@ -113,3 +113,10 @@ body {
   opacity: 90%;
   transition: all 0.5s;
 }
+
+.card {
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: scale(1.10);
+}
